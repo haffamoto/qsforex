@@ -14,7 +14,7 @@ import time
 from qsforex.execution.execution import OANDAExecutionHandler
 from qsforex.portfolio.portfolio import Portfolio
 from qsforex import settings
-from qsforex.strategy.strategy import TestStrategy
+from qsforex.strategy.strategy import MovingAverageCrossStrategy
 from qsforex.data.streaming import StreamingForexPrices
 
 
@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
     # Create the strategy/signal generator, passing the 
     # instrument and the events queue
-    strategy = TestStrategy(pairs, events)
+    strategy = MovingAverageCrossStrategy(pairs, events)
 
     # Create the portfolio object that will be used to
     # compare the OANDA positions with the local, to

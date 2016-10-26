@@ -3,6 +3,8 @@
 source activate myenv   # (in linux)
 activate myenv          # (in windows - note that you should be in your c:\anaconda2 directory)
 
+for home pc is: source activate qsforex_env
+
 To check the current environment has been changed:
 
 conda info -e
