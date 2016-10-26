@@ -4,3 +4,6 @@ settings.py
 
 # log_files
 log_files/*
+
+#IDE related files
+*pycache*

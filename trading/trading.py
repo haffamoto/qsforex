@@ -46,10 +46,13 @@ def trade(events, strategy, portfolio, execution, heartbeat):
                     
        
         time.sleep(heartbeat)
+        logger.info("working")
 
 
 if __name__ == "__main__":
-    # Set up logging
+    
+    # Set up logging - all of this detail needs to go in to the 
+    # file logging_file.conf
     logger = logging.getLogger('qsforex.trading.trading')
     logger.setLevel(logging.DEBUG)  
     log_file = "log_files/rotating.log"
@@ -75,7 +78,7 @@ if __name__ == "__main__":
     # Set the number of decimal places to 2
     getcontext().prec = 2
 
-    heartbeat = 0.0  # Time in seconds between polling
+    heartbeat = 60.0  # Time in seconds between polling
     events = queue.Queue()
     equity = settings.EQUITY
 
